@@ -1,0 +1,11 @@
+Contas para acessar os demais dashboards
+
+Gestor:
+    nome:    karolpontes@gestor.com
+    senha:    123
+Fiscal:
+    nome:    joaosilva@fiscal.com
+    senha:   123
+Produtor:
+    nome:    arthurhenrique@produtor.com
+    senha:   123

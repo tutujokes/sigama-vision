@@ -1,0 +1,202 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* SIGAMA Vision - Paleta Agro-Tech */
+    --background: 0 0% 98%;
+    --foreground: 155 50% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 155 50% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 155 50% 12%;
+
+    /* Verde Agro - Cor primária */
+    --primary: 155 50% 20%;
+    --primary-foreground: 0 0% 98%;
+    --primary-light: 155 45% 35%;
+
+    /* Azul Tecnológico */
+    --secondary: 207 60% 44%;
+    --secondary-foreground: 0 0% 98%;
+
+    /* Amarelo Alerta/Destaque */
+    --accent: 28 88% 66%;
+    --accent-foreground: 155 50% 12%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 155 20% 45%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 155 20% 88%;
+    --input: 155 20% 92%;
+    --ring: 155 50% 20%;
+
+    --radius: 0.75rem;
+    
+    /* Cores customizadas */
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+    --info: 207 60% 44%;
+    
+    /* Gradientes */
+    --gradient-primary: linear-gradient(135deg, hsl(155 50% 20%) 0%, hsl(155 45% 35%) 100%);
+    --gradient-tech: linear-gradient(135deg, hsl(207 60% 44%) 0%, hsl(207 60% 54%) 100%);
+    
+    /* Sombras */
+    --shadow-sm: 0 1px 2px 0 hsl(155 50% 20% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(155 50% 20% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(155 50% 20% / 0.1);
+    
+    /* Transições */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 155 30% 8%;
+    --foreground: 0 0% 98%;
+
+    --card: 155 25% 12%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 155 25% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 155 45% 35%;
+    --primary-foreground: 0 0% 98%;
+    --primary-light: 155 40% 45%;
+
+    --secondary: 207 60% 44%;
+    --secondary-foreground: 0 0% 98%;
+
+    --accent: 28 88% 66%;
+    --accent-foreground: 155 30% 8%;
+
+    --muted: 155 20% 18%;
+    --muted-foreground: 155 10% 65%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 155 20% 20%;
+    --input: 155 20% 20%;
+    --ring: 155 45% 35%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer utilities {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes scale-in {
+    from {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* gov.br sign-in button styles (inserted per request) */
+.govbr-sign-in {
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 100em;
+  border: 0;
+  box-sizing: border-box;
+  color: #1351b4;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 16.8px;
+  font-weight: 600;
+  height: 40px;
+  justify-content: center;
+  line-height: 18px;
+  overflow: hidden;
+  padding: 0 24px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
+}
+
+.govbr-sign-in:hover {
+  background-color: #e6e6e6;
+}
+
+.govbr-img {
+  border-style: none;
+  box-sizing: border-box;
+  color: #1351b4;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16.8px;
+  font-weight: 600;
+  line-height: 1.45;
+  margin-left: 4px !important;
+  max-height: 20px;
+  max-width: 100%;
+  text-align: center;
+  -webkit-text-size-adjust: 100%;
+  text-transform: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
